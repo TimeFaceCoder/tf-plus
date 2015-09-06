@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h_48"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvBookName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:text="Small Text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="#a9a9a9" />
+
+    <ImageButton
+        android:id="@+id/btnEdit"
+        android:background="@null"
+        android:layout_width="@dimen/h_48"
+        android:layout_height="@dimen/h_48"
+        android:src="@drawable/dashboard_edit_default" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="#a9a9a9" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:background="@null"
+        android:layout_width="@dimen/h_48"
+        android:layout_height="@dimen/h_48"
+        android:src="@drawable/dashboard_delete_default" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="#a9a9a9" />
+
+    <ImageButton
+        android:id="@+id/btnLike"
+        android:background="@null"
+        android:layout_width="@dimen/h_48"
+        android:layout_height="@dimen/h_48"
+        android:src="@drawable/dashboard_reply_default" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="#a9a9a9" />
+
+    <ImageButton
+        android:id="@+id/btnComment"
+        android:background="@null"
+        android:layout_width="@dimen/h_48"
+        android:layout_height="@dimen/h_48"
+        android:src="@drawable/dashboard_like_off_default" />
+</LinearLayout>

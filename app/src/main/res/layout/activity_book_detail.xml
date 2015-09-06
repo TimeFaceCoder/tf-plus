@@ -1,0 +1,401 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.rayboot.tf_plus.activities.EventListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/medium"
+            android:paddingRight="@dimen/medium"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBookCover"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ivBookCover"
+                    android:layout_alignTop="@+id/ivBookCover"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:layout_toRightOf="@+id/ivBookCover"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBookTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/small"
+                        android:layout_marginTop="@dimen/normal"
+                        android:text="这是一本时光书的标题"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="作者：Rayboot\n页数：48\n创建时间：2015-8-12"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal"
+                android:layout_marginTop="@dimen/normal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTimeList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/small"
+                    android:layout_weight="1"
+                    android:onClick="onBtnClick"
+                    android:text="时光列表" />
+
+                <Button
+                    android:id="@+id/btnPOD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small"
+                    android:layout_weight="1"
+                    android:onClick="onBtnClick"
+                    android:text="一键成书" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal"
+                android:layout_marginTop="@dimen/normal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llViewTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="@dimen/small"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:onClick="onBtnClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/h_56"
+                        android:layout_height="@dimen/h_56"
+                        android:src="@drawable/ic_whatshot_black_36dp"
+                        android:tint="#e51c23" />
+
+                    <TextView
+                        android:id="@+id/tvViewTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="查看次数" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCollectTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:onClick="onBtnClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/h_56"
+                        android:layout_height="@dimen/h_56"
+                        android:src="@drawable/ic_bookmark_black_36dp"
+                        android:tint="#8bc34a" />
+
+
+                    <TextView
+                        android:id="@+id/tvCollectTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收藏次数" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:onClick="onBtnClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/h_56"
+                        android:layout_height="@dimen/h_56"
+                        android:src="@drawable/ic_my_library_books_white_24dp"
+                        android:tint="#ff9800" />
+
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="时光书分类" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCommentTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:onClick="onBtnClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/h_56"
+                        android:layout_height="@dimen/h_56"
+                        android:src="@drawable/ic_comment_white_36dp"
+                        android:tint="#009688" />
+
+
+                    <TextView
+                        android:id="@+id/tvCommentTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="评论次数" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:onClick="onBtnClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/h_56"
+                        android:layout_height="@dimen/h_56"
+                        android:src="@drawable/ic_face_unlock_black_36dp"
+                        android:tint="#00bcd4" />
+
+
+                    <TextView
+                        android:id="@+id/tvFriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXX也看了" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="3"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:text="这是本书的一些描述最多显示3行\n这是本书的一些描述这是本书的一些描述这是本书的一些描述这是本书的一些描述这是本书的一些描述" />
+
+            <Button
+                android:id="@+id/btnDescMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:text="了解更多"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal"
+                android:layout_marginTop="@dimen/normal"
+                android:text="作者简介" />
+
+            <TextView
+                android:id="@+id/tvAuthorDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium"
+                android:layout_marginLeft="@dimen/medium"
+                android:layout_marginRight="@dimen/medium"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="3"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:text="这是作者简介，最多显示3行\n这是作者简介这是作者简介" />
+
+            <Button
+                android:id="@+id/btnAuthorMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:text="了解更多"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:text="该区域为评论区域\n显示最新的5条评论\n点击该区域进入评论详情页面" />
+
+            <Button
+                android:id="@+id/btnCommentMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/medium"
+                android:text="所有评论"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="onBtnClick"
+                android:text="类似内容" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/moreBook1"
+                    layout="@layout/item_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:clickable="true"
+                    android:onClick="onBtnClick"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/moreBook2"
+                    layout="@layout/item_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:clickable="true"
+                    android:onClick="onBtnClick"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/moreBook3"
+                    layout="@layout/item_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small"
+                    android:clickable="true"
+                    android:onClick="onBtnClick"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:onClick="onFabClick"
+        android:src="@drawable/ic_comment_white_36dp" />
+</android.support.design.widget.CoordinatorLayout>

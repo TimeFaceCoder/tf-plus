@@ -1,0 +1,346 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.rayboot.tf_plus.activities.AddActivity">
+
+    <com.github.rayboot.tf_plus.utils.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/h_72"
+        android:background="?attr/colorPrimary"
+        android:gravity="bottom|right"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/medium"
+        android:paddingRight="@dimen/medium"
+        tools:context="com.github.rayboot.tf_plus.activities.AddActivity">
+
+        <TextView
+            android:id="@+id/tvAddBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加书"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse" />
+
+
+        <LinearLayout
+            android:id="@+id/llAddBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal"
+            android:layout_marginTop="@dimen/normal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/addQQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/test"
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ书"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addWeChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信书"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addFastest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快速成书"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时光书"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddSocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="社交"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse" />
+
+
+
+        <LinearLayout
+            android:id="@+id/llAddSocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal"
+            android:layout_marginTop="@dimen/normal"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/addFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时光圈"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记录时光"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse" />
+
+
+        <LinearLayout
+            android:id="@+id/llAddWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal"
+            android:layout_marginTop="@dimen/normal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/addScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="扫描照片"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addWrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="写文字"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onBtnClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/h_72"
+                    android:layout_height="@dimen/h_72"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发图文"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:onClick="onFabClick"
+        android:src="@drawable/ic_clear_white_36dp" />
+</FrameLayout>

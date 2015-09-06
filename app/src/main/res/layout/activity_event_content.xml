@@ -1,0 +1,262 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.rayboot.tf_plus.activities.EventListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <ImageView
+                android:id="@+id/ivEventLogo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/h_48"
+                    android:layout_height="@dimen/h_48"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:layout_marginRight="@dimen/medium"
+                    android:src="@mipmap/ic_launcher" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="@dimen/h_24"
+                    android:layout_height="@dimen/h_24"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="@dimen/medium"
+                    android:text="New Button" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/h_80"
+                    android:paddingRight="@dimen/h_56">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="时光流影足球队对战0561"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/small"
+                        android:layout_marginTop="@dimen/small"
+                        android:text="rayboot"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="公开活动"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/medium"
+                    android:text="这是活动描述\n首发阵容 1号****************\n something elses"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="你参加了吗？"
+                    android:layout_marginRight="@dimen/medium"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="会参加"
+                    android:layout_marginRight="@dimen/medium"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:textColor="#00ff00" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h_48"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/medium"
+                    android:paddingRight="@dimen/small"
+                    android:text="2015年8月25号 下午4:00开始"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h_48"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/medium"
+                    android:paddingRight="@dimen/small"
+                    android:text="工大足球场\n宁国路****号"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#e2e2e2"
+                    android:layout_marginBottom="@dimen/normal"/>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/medium"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:text="邀请对象 (21人)"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="@dimen/medium"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="@dimen/h_48"
+                        android:layout_height="@dimen/h_48"
+                        android:layout_margin="@dimen/small"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:layout_width="@dimen/h_48"
+                        android:layout_height="@dimen/h_48"
+                        android:layout_margin="@dimen/small"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:layout_width="@dimen/h_48"
+                        android:layout_height="@dimen/h_48"
+                        android:layout_margin="@dimen/small"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:layout_width="@dimen/h_48"
+                        android:layout_height="@dimen/h_48"
+                        android:layout_margin="@dimen/small"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+另外18个邀请对象"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/medium"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:text="查看全部" />
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/item_main_message_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:onClick="onFabClick"
+        android:src="@drawable/ic_add_white_36dp" />
+</android.support.design.widget.CoordinatorLayout>

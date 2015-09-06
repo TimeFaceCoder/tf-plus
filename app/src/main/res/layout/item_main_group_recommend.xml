@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_36"
+        android:background="#673ab7"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/medium"
+        android:paddingTop="@dimen/h_36">
+
+        <TextView
+            android:id="@+id/tvTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:text="时光流影足球圈"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:text="共 121,197 个成员"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:text="帅哥美女全都有"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/normal"
+                android:text="加入时光圈" />
+
+            <Button
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="探索更多" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivGroupLogo"
+        android:layout_width="@dimen/h_72"
+        android:layout_height="@dimen/h_72"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@mipmap/ic_launcher" />
+</FrameLayout>

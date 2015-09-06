@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_blue">#039ae3</color>
+
+    <!--<color name="colorPrimary">#e61eaef3</color>-->
+    <!--<color name="colorPrimaryDark">@color/bg5</color>-->
+    <!--<color name="primaryColor">#1eaef3</color>-->
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#5677fc</color>
+    <color name="fab_color_pressed">#3f51b5</color>
+    <color name="line">#e2e2e2</color>
+    <color name="red">#ff0000</color>
+
+</resources>
