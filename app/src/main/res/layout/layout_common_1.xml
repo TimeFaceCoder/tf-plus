@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:soulwolf="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -9,29 +9,27 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <net.soulwolf.widget.ratiolayout.widget.RatioImageView
-            android:id="@+id/ivBookCover"
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivLogo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            soulwolf:datumRatio="datumWidth"
-            android:src="@mipmap/ic_launcher"
-            soulwolf:heightRatio="4.0"
-            soulwolf:widthRatio="3.0" />
+            android:layout_height="100dp"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:placeholderImageScaleType="centerCrop"/>
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textStyle="bold"
             android:text="标题"
-            android:id="@+id/tvBookName" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvSubTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:text="用户名  著"
-            android:id="@+id/tvAuthorName" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     </LinearLayout>
 </FrameLayout>

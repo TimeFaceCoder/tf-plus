@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"/>
 
             <include
-                layout="@layout/item_main_book_recommend_1"
+                layout="@layout/item_main_recommend_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <include
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <include
-                layout="@layout/item_main_user_recommend"
+                layout="@layout/item_main_recommend_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

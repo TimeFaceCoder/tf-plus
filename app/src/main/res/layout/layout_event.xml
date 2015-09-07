@@ -1,88 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:onClick="onEventClick"
-    android:clickable="true">
+    android:clickable="true"
+    android:onClick="onEventClick">
 
 
-    <net.soulwolf.widget.ratiolayout.widget.RatioImageView
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivEventLogo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher"
-        android:scaleType="centerCrop"
-        android:id="@+id/imageView2"
-        android:layout_gravity="left|top" />
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:placeholderImageScaleType="centerCrop" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/h_72"
-        android:paddingRight="@dimen/h_72"
+        android:layout_gravity="center_horizontal|bottom"
         android:layout_marginTop="100dp"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal|bottom">
+        android:paddingLeft="@dimen/h_72"
+        android:paddingRight="@dimen/h_72">
 
 
         <TextView
+            android:id="@+id/tvState"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="已参加"
             android:layout_margin="@dimen/small"
-            android:textColor="#00ff00"
-            android:id="@+id/tvState" />
+            android:singleLine="true"
+            android:text="已参加"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#00ff00" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
-            android:background="#e2e2e2"/>
+            android:background="#e2e2e2" />
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:text="Vs 0561"
-            android:id="@+id/tvTitle" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <TextView
+            android:id="@+id/tvTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:text="2015年8月25日 下午7:00"
             android:layout_marginLeft="@dimen/small"
             android:layout_marginRight="@dimen/small"
-            android:id="@+id/tvTime" />
+            android:singleLine="true"
+            android:text="2015年8月25日 下午7:00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
         <TextView
+            android:id="@+id/tvLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:text="时光流影主场"
             android:layout_margin="@dimen/small"
-            android:id="@+id/tvLocation" />
+            android:singleLine="true"
+            android:text="时光流影主场"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
     </LinearLayout>
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/ivUserLogo"
         android:layout_width="@dimen/h_56"
         android:layout_height="@dimen/h_56"
+        android:layout_gravity="center_vertical|left"
         android:layout_margin="@dimen/normal"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="center_vertical|left"/>
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:placeholderImageScaleType="centerCrop" />
 
     <View
         android:id="@+id/ivState"
         android:layout_width="@dimen/h_48"
         android:layout_height="@dimen/h_48"
+        android:layout_gravity="center_vertical|right"
         android:layout_margin="@dimen/normal"
-        android:src="@mipmap/ic_launcher"
         android:background="#00ff00"
-        android:layout_gravity="center_vertical|right"/>
+        android:src="@mipmap/ic_launcher" />
 
 </FrameLayout>
