@@ -2,6 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.github.rayboot.tf_plus.activities.GroupContentActivity">
+    <item android:id="@+id/action_contacts" android:title="查看通讯录"
+        android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_share" android:title="分享时光圈"
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_exit" android:title="退出时光圈"

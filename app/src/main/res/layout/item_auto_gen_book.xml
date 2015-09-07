@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/medium"
+    android:gravity="center_vertical"
+    android:background="#259b24"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="自动帮你生成了一本书\n\n2014年10月14日至17日\n共38个精彩片段"
+        android:lineSpacingMultiplier="1.2"
+        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivBookCover"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:actualImageScaleType="centerCrop"/>
+
+</LinearLayout>

@@ -12,56 +12,69 @@
         android:gravity="center"
         android:singleLine="true"
         android:ellipsize="middle"
-        android:layout_marginLeft="@dimen/medium"
-        android:layout_marginRight="@dimen/medium"
-        android:text="Small Text"
+        android:layout_marginLeft="@dimen/normal"
+        android:layout_marginRight="@dimen/normal"
+        android:text="《时光书名》"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
     <View
         android:layout_width="2px"
         android:layout_height="match_parent"
-        android:background="#a9a9a9" />
+        android:background="@color/line" />
 
     <ImageButton
         android:id="@+id/btnEdit"
         android:background="@null"
         android:layout_width="@dimen/h_48"
         android:layout_height="@dimen/h_48"
-        android:src="@drawable/dashboard_edit_default" />
+        android:src="@drawable/ic_mode_edit_black_24dp" />
 
     <View
         android:layout_width="2px"
         android:layout_height="match_parent"
-        android:background="#a9a9a9" />
+        android:background="@color/line" />
 
     <ImageButton
         android:id="@+id/btnDelete"
         android:background="@null"
         android:layout_width="@dimen/h_48"
         android:layout_height="@dimen/h_48"
-        android:src="@drawable/dashboard_delete_default" />
+        android:src="@drawable/ic_delete_black_24dp" />
 
     <View
         android:layout_width="2px"
         android:layout_height="match_parent"
-        android:background="#a9a9a9" />
+        android:background="@color/line" />
+
+    <ImageButton
+        android:id="@+id/btnShare"
+        android:background="@null"
+        android:layout_width="@dimen/h_48"
+        android:layout_height="@dimen/h_48"
+        android:src="@drawable/ic_open_in_new_black_24dp" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
 
     <ImageButton
         android:id="@+id/btnLike"
         android:background="@null"
         android:layout_width="@dimen/h_48"
         android:layout_height="@dimen/h_48"
-        android:src="@drawable/dashboard_reply_default" />
+        android:src="@drawable/ic_comment_black_24dp" />
 
     <View
         android:layout_width="2px"
         android:layout_height="match_parent"
-        android:background="#a9a9a9" />
+        android:background="@color/line" />
 
     <ImageButton
         android:id="@+id/btnComment"
         android:background="@null"
         android:layout_width="@dimen/h_48"
         android:layout_height="@dimen/h_48"
-        android:src="@drawable/dashboard_like_off_default" />
+        android:tint="#ff0000"
+        android:src="@drawable/ic_favorite_black_24dp" />
 </LinearLayout>

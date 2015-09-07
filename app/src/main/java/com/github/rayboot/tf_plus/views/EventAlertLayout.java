@@ -30,14 +30,17 @@ public class EventAlertLayout extends FrameLayout {
 
     public EventAlertLayout(Context context) {
         super(context);
+        init();
     }
 
     public EventAlertLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public EventAlertLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
     public EventAlertLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
