@@ -22,7 +22,9 @@
             android:layout_marginLeft="@dimen/normal"
             android:layout_marginRight="@dimen/normal"
             android:layout_weight="1"
+            android:clickable="true"
             android:ellipsize="middle"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:singleLine="true"
             android:text="《时光书名》"
@@ -37,7 +39,7 @@
             android:id="@+id/btnEdit"
             android:layout_width="@dimen/h_48"
             android:layout_height="@dimen/h_48"
-            android:background="@null"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_mode_edit_black_24dp" />
 
         <View
@@ -49,7 +51,7 @@
             android:id="@+id/btnDelete"
             android:layout_width="@dimen/h_48"
             android:layout_height="@dimen/h_48"
-            android:background="@null"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_delete_black_24dp" />
 
         <View
@@ -61,20 +63,8 @@
             android:id="@+id/btnShare"
             android:layout_width="@dimen/h_48"
             android:layout_height="@dimen/h_48"
-            android:background="@null"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_open_in_new_black_24dp" />
-
-        <View
-            android:layout_width="2px"
-            android:layout_height="match_parent"
-            android:background="@color/line" />
-
-        <ImageButton
-            android:id="@+id/btnLike"
-            android:layout_width="@dimen/h_48"
-            android:layout_height="@dimen/h_48"
-            android:background="@null"
-            android:src="@drawable/ic_comment_black_24dp" />
 
         <View
             android:layout_width="2px"
@@ -85,7 +75,19 @@
             android:id="@+id/btnComment"
             android:layout_width="@dimen/h_48"
             android:layout_height="@dimen/h_48"
-            android:background="@null"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_comment_black_24dp" />
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/line" />
+
+        <ImageButton
+            android:id="@+id/btnLike"
+            android:layout_width="@dimen/h_48"
+            android:layout_height="@dimen/h_48"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_favorite_black_24dp"
             android:tint="#ff0000" />
     </LinearLayout>

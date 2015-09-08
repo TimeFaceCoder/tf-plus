@@ -4,11 +4,15 @@ import android.content.Context;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
+import com.github.rayboot.tf_plus.activities.GroupContentActivity;
+import com.github.rayboot.tf_plus.activities.TempActivity;
+import com.github.rayboot.tf_plus.models.GroupObj;
 import com.github.rayboot.tf_plus.models.UserObj;
 
 import butterknife.Bind;
@@ -51,6 +55,25 @@ public class AvatarLayout extends RelativeLayout {
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_avatar, this, true);
         ButterKnife.bind(this);
+
+        mIvImg.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TempActivity.open(getContext(), "个人中心");
+            }
+        });
+        mTvName.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TempActivity.open(getContext(), "个人中心");
+            }
+        });
+        mTvFrom.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GroupContentActivity.open(getContext(), GroupObj.TYPE_FRIEND);
+            }
+        });
     }
 
     public void bindItem(UserObj userObj) {

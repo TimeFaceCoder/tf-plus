@@ -4,11 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
+import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.UserObj;
 
 import butterknife.Bind;
@@ -23,6 +25,8 @@ public class UserLayout extends LinearLayout {
     SimpleDraweeView mIvLogo;
     @Bind(R.id.tvName)
     TextView mTvName;
+    @Bind(R.id.root)
+    LinearLayout mRoot;
 
     public UserLayout(Context context) {
         super(context);
@@ -47,6 +51,13 @@ public class UserLayout extends LinearLayout {
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_user, this, true);
         ButterKnife.bind(this);
+
+        mRoot.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TempActivity.open(getContext(), "个人中心");
+            }
+        });
     }
 
     public void bindItem(Object object) {

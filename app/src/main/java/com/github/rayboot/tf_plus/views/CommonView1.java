@@ -1,14 +1,19 @@
 package com.github.rayboot.tf_plus.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
+import com.github.rayboot.tf_plus.activities.BookDetailActivity;
+import com.github.rayboot.tf_plus.activities.GroupContentActivity;
+import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.BookObj;
 import com.github.rayboot.tf_plus.models.GameObj;
 import com.github.rayboot.tf_plus.models.GroupObj;
@@ -28,6 +33,8 @@ public class CommonView1 extends FrameLayout {
     TextView mTvTitle;
     @Bind(R.id.tvSubTitle)
     TextView mTvSubTitle;
+    @Bind(R.id.root)
+    FrameLayout mRoot;
 
     public CommonView1(Context context) {
         super(context);
@@ -52,9 +59,26 @@ public class CommonView1 extends FrameLayout {
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_common_1, this, true);
         ButterKnife.bind(this);
+
+        mRoot.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Object object = v.getTag(R.string.tag_obj);
+                if (object instanceof BookObj) {
+                    getContext().startActivity(new Intent(getContext(), BookDetailActivity.class));
+                }else if (object instanceof GroupObj) {
+                    GroupContentActivity.open(getContext(), GroupObj.TYPE_FRIEND);
+                }else if (object instanceof GameObj) {
+                    TempActivity.open(getContext(), "游戏详情页面");
+                }else if (object instanceof UserObj) {
+                    TempActivity.open(getContext(), "个人中心");
+                }
+            }
+        });
     }
 
     public void bindItem(Object object) {
+        mRoot.setTag(R.string.tag_obj, object);
         if (object instanceof BookObj) {
             BookObj item = (BookObj) object;
             mIvLogo.setAspectRatio(0.75f);
@@ -67,12 +91,12 @@ public class CommonView1 extends FrameLayout {
             mIvLogo.setImageURI(Uri.parse(item.image));
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
-        }else if (object instanceof UserObj) {
+        } else if (object instanceof UserObj) {
             UserObj item = (UserObj) object;
             mIvLogo.setAspectRatio(1.0f);
             mIvLogo.setImageURI(Uri.parse(item.image));
             mTvTitle.setText(item.name);
-        }else if (object instanceof GameObj) {
+        } else if (object instanceof GameObj) {
             GameObj item = (GameObj) object;
             mIvLogo.setAspectRatio(1.0f);
             mIvLogo.setImageURI(Uri.parse(item.image));

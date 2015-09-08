@@ -4,10 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
+import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.ADObj;
 
 import butterknife.Bind;
@@ -44,6 +46,14 @@ public class ItemADView extends FrameLayout {
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.item_main_ad, this, true);
         ButterKnife.bind(this);
+
+        mImage.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TempActivity.open(getContext(), "打开广告页面");
+            }
+        });
+
     }
 
     public void bindItem(ADObj adObj) {

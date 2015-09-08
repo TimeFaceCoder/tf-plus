@@ -38,6 +38,9 @@
             <com.github.rayboot.tf_plus.views.ItemADView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <com.github.rayboot.tf_plus.views.EventAlertLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <include
                 layout="@layout/item_main_recommend_1"

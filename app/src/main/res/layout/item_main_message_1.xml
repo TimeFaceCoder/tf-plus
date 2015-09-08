@@ -4,6 +4,9 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/root"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -22,7 +25,7 @@
             android:layout_marginLeft="@dimen/medium"
             android:layout_marginRight="@dimen/medium"
             android:singleLine="true"
-            android:text="Medium Text"
+            android:text="简单概述原则"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textStyle="bold" />
 
@@ -30,17 +33,52 @@
             android:id="@+id/tvContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal"
             android:layout_marginLeft="@dimen/medium"
             android:layout_marginRight="@dimen/medium"
+            android:layout_marginTop="@dimen/normal"
             android:ellipsize="end"
             android:maxLines="3"
-            android:text="Medium Text"
+            android:text="无图片情况，内容显示5行，有图片情况内容显示3行。多图情况图片区定高可横向滑动，单张图片则显示完"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_36"
+            android:layout_marginLeft="@dimen/medium"
+            android:layout_marginRight="@dimen/medium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvEvent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="#活动1"
+                android:textColor="#5677fc" />
+
+            <TextView
+                android:id="@+id/tvEvent2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal"
+                android:layout_marginRight="@dimen/normal"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="#活动2"
+                android:textColor="#5677fc" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/ivPhoto"
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="170dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/t1" />
 
         <com.github.rayboot.tf_plus.views.DashboardLayout
             android:id="@+id/dashboard"

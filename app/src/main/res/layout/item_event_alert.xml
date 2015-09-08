@@ -32,6 +32,9 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/main"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -90,10 +93,11 @@
             android:background="@color/line" />
 
         <TextView
+            android:id="@+id/btnMore"
             android:layout_width="match_parent"
             android:layout_height="@dimen/h_48"
             android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/medium"
             android:paddingRight="@dimen/medium"
