@@ -16,7 +16,13 @@
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+            <Button
+                android:id="@+id/btnTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"/>
+            </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView

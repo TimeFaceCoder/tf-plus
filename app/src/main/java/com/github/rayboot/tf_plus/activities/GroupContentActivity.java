@@ -91,7 +91,7 @@ public class GroupContentActivity extends AppCompatActivity {
         }else if (id == R.id.action_add_person) {
             startActivity(new Intent(this, MemberActivity.class));
         }else if (id == R.id.action_group_books) {
-            BookStoreActivity.open(this, 1);
+            BookStoreActivity.open(this, 2);
         }else if (id == R.id.action_add_book) {
             startActivity(new Intent(this, GroupSelectTimeActivity.class));
         }

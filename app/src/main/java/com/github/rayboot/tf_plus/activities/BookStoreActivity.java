@@ -75,12 +75,10 @@ public class BookStoreActivity extends AppCompatActivity {
                 mTabLayout.addTab(mTabLayout.newTab().setText("活动2"));
                 mTabLayout.addTab(mTabLayout.newTab().setText("活动3"));
                 mTabLayout.addTab(mTabLayout.newTab().setText("活动4"));
-                mTabLayout.addTab(mTabLayout.newTab().setText("活动5"));
-                mTabLayout.addTab(mTabLayout.newTab().setText("活动6"));
-                mTabLayout.addTab(mTabLayout.newTab().setText("活动7"));
-                mTabLayout.addTab(mTabLayout.newTab().setText("活动8"));
-                mTabLayout.addTab(mTabLayout.newTab().setText("活动9"));
-                mTabLayout.addTab(mTabLayout.newTab().setText("活动10"));
+                break;
+            case 3:
+                mTabLayout.addTab(mTabLayout.newTab().setText("我的书架"));
+                mTabLayout.addTab(mTabLayout.newTab().setText("活动名称"));
                 break;
         }
         ListRecyclerAdapter<BookStoreItem, BookStoreViewHolder> listAdapter = ListRecyclerAdapter.create();

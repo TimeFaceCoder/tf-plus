@@ -39,4 +39,5 @@ dependencies {
     compile 'com.infstory:recyclerlist:1.0.0'
     compile 'com.facebook.fresco:fresco:0.6.1'
     compile 'com.facebook.fresco:imagepipeline-okhttp:0.6.1'
+    compile 'com.shehabic.droppy:Droppy:0.2.5.1@aar'
 }

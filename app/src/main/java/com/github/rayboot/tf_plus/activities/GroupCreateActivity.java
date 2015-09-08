@@ -75,7 +75,7 @@ public class GroupCreateActivity extends AppCompatActivity {
     }
 
     public void onFabClick(View view) {
-        startActivity(new Intent(this, GroupContentActivity.class));
+        GroupContentActivity.open(this, type);
     }
 
     public void onBtnClick(View view) {
