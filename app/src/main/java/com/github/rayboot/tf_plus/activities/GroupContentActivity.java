@@ -3,17 +3,13 @@ package com.github.rayboot.tf_plus.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.models.GroupObj;
@@ -84,16 +80,36 @@ public class GroupContentActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-        } else if (id == android.R.id.home){
+        } else if (id == android.R.id.home) {
             this.finish();
-        } else if (id == R.id.action_add_event){
+        } else if (id == R.id.action_add_event) {
             startActivity(new Intent(this, EventCreateActivity.class));
-        }else if (id == R.id.action_add_person) {
+        } else if (id == R.id.action_add_person) {
             startActivity(new Intent(this, MemberActivity.class));
-        }else if (id == R.id.action_group_books) {
+        } else if (id == R.id.action_group_books) {
             BookStoreActivity.open(this, 2);
-        }else if (id == R.id.action_add_book) {
+        } else if (id == R.id.action_add_book) {
             startActivity(new Intent(this, GroupSelectTimeActivity.class));
+        } else if (id == R.id.action_tree) {
+            TempActivity.open(this, "查看族谱\n如没有给出提示新建\n如有，则显示族谱的树状结构，可以增加，删除，以及用户关系认领和信息完善等等操作");
+        } else if (id == R.id.action_share) {
+            TempActivity.open(this, "调用分享功能，可以分享给微信微博，也可以分享给时光流影内部，可作为快速入圈的一种途径");
+        } else if (id == R.id.action_exit) {
+            Snackbar.make(mRoot, "退出时光圈", Snackbar.LENGTH_SHORT).show();
+        } else if (id == R.id.action_fuck) {
+            TempActivity.open(this, "举报流程");
+        } else if (id == R.id.action_setting) {
+            TempActivity.open(this, "设置\n如推送消息\n圈消息是否在首页显示\n等等");
+        } else if (id == R.id.action_help) {
+            TempActivity.open(this, "帮助\n可以有视频简介，或者文字简介。主要是关于时光圈的");
+        } else if (id == R.id.action_big_thing) {
+            TempActivity.open(this, "还没想好，到底是制作企业大事记的入口，还是浏览企业大事记的入口。");
+        } else if (id == R.id.action_com_verify) {
+            TempActivity.open(this, "企业认证流程，上传营业执照或者证明你为该企业时光圈官方用户的凭证\n一旦认证成功，则直接获取超级管理员权限，超级管理员可以不付费转载圈内信息，只有超级管理员才可以发布企业大事记的信息等等权限。");
+        } else if (id == R.id.action_contacts) {
+            TempActivity.open(this, "查看通讯录\n如没有上传则引导上传\n如已经上传则列表展示通讯录内容\n该页面针对普通用户只能认领自己本人和完善个人信息\n增删改只有管理员或群主有权限");
+        } else if (id == R.id.action_star_verify) {
+            TempActivity.open(this, "明星圈认证。\n具体认证完后续没想好");
         }
 
         return super.onOptionsItemSelected(item);
@@ -102,6 +118,7 @@ public class GroupContentActivity extends AppCompatActivity {
     public void onFabClick(View view) {
         startActivity(new Intent(this, PublishActivity.class));
     }
+
     @OnClick(R.id.btnGroupAllEvent)
     public void onGroupAllEventClick(View view) {
         startActivity(new Intent(this, EventListActivity.class));

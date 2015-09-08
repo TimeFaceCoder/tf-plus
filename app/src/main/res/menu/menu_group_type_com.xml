@@ -2,7 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.github.rayboot.tf_plus.activities.GroupContentActivity">
-    <item android:id="@+id/action_contacts" android:title="大事记"
+    <item android:id="@+id/action_big_thing" android:title="生成大事记"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_com_verify" android:title="企业认证"
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_share" android:title="分享时光圈"
         android:orderInCategory="100" app:showAsAction="never" />
