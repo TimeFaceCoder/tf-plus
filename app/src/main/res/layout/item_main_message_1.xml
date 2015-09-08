@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include
-            android:layout_margin="@dimen/medium"
+        <com.github.rayboot.tf_plus.views.AvatarLayout
+            android:id="@+id/avatar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/layout_avatar"
-            android:layout_gravity="left|top" />
+            android:layout_gravity="left|top"
+            android:layout_margin="@dimen/medium" />
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:text="Medium Text"
-            android:singleLine="true"
             android:layout_marginLeft="@dimen/medium"
             android:layout_marginRight="@dimen/medium"
-            android:id="@+id/tvTitle"
+            android:singleLine="true"
+            android:text="Medium Text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:text="Medium Text"
             android:layout_marginLeft="@dimen/medium"
             android:layout_marginRight="@dimen/medium"
-            android:maxLines="3"
             android:ellipsize="end"
-            android:id="@+id/tvContent" />
+            android:maxLines="3"
+            android:text="Medium Text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
         <ImageView
+            android:id="@+id/ivPhoto"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/ivPhoto" />
+            android:layout_height="100dp" />
 
-        <include
+        <com.github.rayboot.tf_plus.views.DashboardLayout
+            android:id="@+id/dashboard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/layout_dashboard" />
-
-
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </FrameLayout>

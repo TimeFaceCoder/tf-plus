@@ -149,7 +149,7 @@ public class AddActivity extends AppCompatActivity implements RevealBackgroundVi
                 TempActivity.open(this, "添加时光书");
                 break;
             case R.id.addGroup:
-                startActivity(new Intent(this, GroupCreateActivity.class));
+                startActivity(new Intent(this, GroupTypeActivity.class));
                 break;
             case R.id.addEvent:
                 startActivity(new Intent(this, EventCreateActivity.class));

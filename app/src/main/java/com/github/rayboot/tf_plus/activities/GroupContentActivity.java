@@ -1,5 +1,6 @@
 package com.github.rayboot.tf_plus.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.rayboot.tf_plus.R;
+import com.github.rayboot.tf_plus.models.GroupObj;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -26,12 +28,21 @@ public class GroupContentActivity extends AppCompatActivity {
     Toolbar mToolbar;
     @Bind(R.id.root)
     CoordinatorLayout mRoot;
+    int type = GroupObj.TYPE_FRIEND;
+
+    public static void open(Context context, int type) {
+        Intent intent = new Intent(context, GroupContentActivity.class);
+        intent.putExtra("type", type);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_content);
         ButterKnife.bind(this);
+
+        type = getIntent().getIntExtra("type", GroupObj.TYPE_FRIEND);
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -40,7 +51,26 @@ public class GroupContentActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_group_content, menu);
+        switch (type) {
+            case GroupObj.TYPE_FRIEND:
+                getMenuInflater().inflate(R.menu.menu_group_type_friend, menu);
+                break;
+            case GroupObj.TYPE_BABY:
+                getMenuInflater().inflate(R.menu.menu_group_type_baby, menu);
+                break;
+            case GroupObj.TYPE_STUDENT:
+                getMenuInflater().inflate(R.menu.menu_group_type_student, menu);
+                break;
+            case GroupObj.TYPE_STAR:
+                getMenuInflater().inflate(R.menu.menu_group_type_star, menu);
+                break;
+            case GroupObj.TYPE_FAMILY:
+                getMenuInflater().inflate(R.menu.menu_group_type_family, menu);
+                break;
+            case GroupObj.TYPE_COM:
+                getMenuInflater().inflate(R.menu.menu_group_type_com, menu);
+                break;
+        }
         return true;
     }
 

@@ -23,14 +23,17 @@ public class AutoGenBookView extends LinearLayout {
 
     public AutoGenBookView(Context context) {
         super(context);
+        init();
     }
 
     public AutoGenBookView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public AutoGenBookView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
     public AutoGenBookView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {

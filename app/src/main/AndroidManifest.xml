@@ -66,6 +66,7 @@
         </activity>
         <activity
             android:name=".activities.GroupCreateActivity"
+            android:noHistory="true"
             android:label="@string/title_activity_group_create" >
         </activity>
         <activity android:name=".activities.GroupContentActivity" >
@@ -110,6 +111,11 @@
             android:name=".activities.AddActivity"
             android:label="@string/title_activity_add"
             android:theme="@style/AppTheme.TransparentActivity" >
+        </activity>
+        <activity
+            android:name=".activities.GroupTypeActivity"
+            android:noHistory="true"
+            android:label="@string/title_activity_group_type" >
         </activity>
     </application>
 

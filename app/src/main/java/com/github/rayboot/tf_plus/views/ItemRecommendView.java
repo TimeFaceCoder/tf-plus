@@ -38,18 +38,22 @@ public class ItemRecommendView extends FrameLayout {
 
     public ItemRecommendView(Context context) {
         super(context);
+        init();
     }
 
     public ItemRecommendView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public ItemRecommendView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
     public ItemRecommendView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        init();
     }
 
     private void init() {
