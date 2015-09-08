@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:onClick="onBookClick"
     app:cardCornerRadius="@dimen/small"
+    android:id="@+id/root"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardElevation="1dp">

@@ -29,28 +29,22 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:orientation="vertical">
-            <include
-                layout="@layout/layout_event"
+            <com.github.rayboot.tf_plus.views.EventLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/layout_event"
+            <com.github.rayboot.tf_plus.views.EventLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/layout_event"
+            <com.github.rayboot.tf_plus.views.EventLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/layout_event"
+            <com.github.rayboot.tf_plus.views.EventLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/layout_event"
+            <com.github.rayboot.tf_plus.views.EventLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/layout_event"
+            <com.github.rayboot.tf_plus.views.EventLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

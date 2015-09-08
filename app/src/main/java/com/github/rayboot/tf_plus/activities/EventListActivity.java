@@ -58,8 +58,4 @@ public class EventListActivity extends AppCompatActivity {
         startActivity(new Intent(this, EventCreateActivity.class));
     }
 
-    public void onEventClick(View view) {
-        startActivity(new Intent(this, EventContentActivity.class));
-    }
-
 }

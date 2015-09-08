@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -44,6 +43,8 @@ public class EventLayout extends FrameLayout {
     LinearLayout mMain;
 
     DroppyMenuPopup droppyMenu;
+    @Bind(R.id.root)
+    FrameLayout mRoot;
 
     public EventLayout(Context context) {
         super(context);
@@ -68,7 +69,6 @@ public class EventLayout extends FrameLayout {
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.layout_event, this, true);
         ButterKnife.bind(this);
-
 
 
         DroppyMenuPopup.Builder droppyBuilder = new DroppyMenuPopup.Builder(getContext(), mTvState);
@@ -103,17 +103,17 @@ public class EventLayout extends FrameLayout {
 
         droppyMenu = droppyBuilder.build();
 
-        mMain.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getContext().startActivity(new Intent(getContext(), EventContentActivity.class));
-            }
-        });
-
         mTvState.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 droppyMenu.show();
+            }
+        });
+
+        mRoot.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getContext().startActivity(new Intent(getContext(), EventContentActivity.class));
             }
         });
     }

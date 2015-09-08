@@ -42,28 +42,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <include
-                layout="@layout/item_main_recommend_1"
+            <com.github.rayboot.tf_plus.views.ItemRecommendView1
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/item_main_group_recommend"
+            <com.github.rayboot.tf_plus.views.ItemRecommendView2
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.ItemRecommendView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <!--<include-->
-                <!--layout="@layout/item_main_message_2"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"/>-->
-            <include
-                layout="@layout/item_main_recommend"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <include
-                layout="@layout/item_main_recommend_2"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

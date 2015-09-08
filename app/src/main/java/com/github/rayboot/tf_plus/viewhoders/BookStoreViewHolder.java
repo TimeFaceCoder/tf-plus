@@ -1,6 +1,7 @@
 package com.github.rayboot.tf_plus.viewhoders;
 
 import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.TextView;
 
@@ -19,7 +20,8 @@ import butterknife.ButterKnife;
  */
 public class BookStoreViewHolder extends BindViewHolder<BookStoreItem> {
 
-
+    @Bind(R.id.root)
+    CardView mRoot;
     @Bind(R.id.ivBook)
     SimpleDraweeView mIvBook;
     @Bind(R.id.tvBookTitle)
@@ -27,8 +29,11 @@ public class BookStoreViewHolder extends BindViewHolder<BookStoreItem> {
     @Bind(R.id.tvAuthorName)
     TextView mTvAuthorName;
 
-    public BookStoreViewHolder(View itemView) {
+    View.OnClickListener listener;
+
+    public BookStoreViewHolder(View itemView, View.OnClickListener onClickListener) {
         super(itemView);
+        this.listener = onClickListener;
         ButterKnife.bind(this, itemView);
         mIvBook.setAspectRatio(0.75f);
     }
@@ -38,5 +43,6 @@ public class BookStoreViewHolder extends BindViewHolder<BookStoreItem> {
         mIvBook.setImageURI(Uri.parse(bookStoreItem.image));
         mTvBookTitle.setText(bookStoreItem.title);
         mTvAuthorName.setText(bookStoreItem.author);
+        mRoot.setOnClickListener(this.listener);
     }
 }

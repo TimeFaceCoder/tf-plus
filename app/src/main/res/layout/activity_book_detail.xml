@@ -354,34 +354,28 @@
                 android:layout_marginBottom="@dimen/medium"
                 android:orientation="horizontal">
 
-                <include
+                <com.github.rayboot.tf_plus.views.BookView
                     android:id="@+id/moreBook1"
-                    layout="@layout/item_book"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/small"
                     android:clickable="true"
-                    android:onClick="onBtnClick"
                     android:layout_weight="1" />
 
-                <include
+                <com.github.rayboot.tf_plus.views.BookView
                     android:id="@+id/moreBook2"
-                    layout="@layout/item_book"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/small"
                     android:clickable="true"
-                    android:onClick="onBtnClick"
                     android:layout_weight="1" />
 
-                <include
+                <com.github.rayboot.tf_plus.views.BookView
                     android:id="@+id/moreBook3"
-                    layout="@layout/item_book"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/small"
                     android:clickable="true"
-                    android:onClick="onBtnClick"
                     android:layout_weight="1" />
             </LinearLayout>
 

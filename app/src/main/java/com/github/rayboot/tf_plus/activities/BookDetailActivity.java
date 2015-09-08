@@ -90,10 +90,6 @@ public class BookDetailActivity extends AppCompatActivity {
             case R.id.btnCommentMore:
                 TempActivity.open(this, "评论列表");
                 break;
-            case R.id.moreBook1:
-            case R.id.moreBook2:
-            case R.id.moreBook3:
-                break;
         }
 
     }

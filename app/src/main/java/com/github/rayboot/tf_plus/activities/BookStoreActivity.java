@@ -90,7 +90,13 @@ public class BookStoreActivity extends AppCompatActivity {
         listAdapter.createViewHolder(new Func2<ViewGroup, Integer, BookStoreViewHolder>() {
             @Override
             public BookStoreViewHolder call(ViewGroup viewGroup, Integer integer) {
-                return new BookStoreViewHolder(LayoutInflater.from(BookStoreActivity.this).inflate(R.layout.item_book, viewGroup, false));
+                return new BookStoreViewHolder(LayoutInflater.from(BookStoreActivity.this).inflate(R.layout.item_book, viewGroup, false)
+                        , new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        BookStoreActivity.this.startActivity(new Intent(BookStoreActivity.this, BookDetailActivity.class));
+                    }
+                });
             }
         });
         mRecycler.addItemDecoration(new SpacesItemDecoration(24));
@@ -121,9 +127,5 @@ public class BookStoreActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void onBookClick(View view) {
-        startActivity(new Intent(this, BookDetailActivity.class));
     }
 }

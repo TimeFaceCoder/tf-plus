@@ -217,38 +217,31 @@
             </LinearLayout>
 
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_main_message_1"
+            <com.github.rayboot.tf_plus.views.MessageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
