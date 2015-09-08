@@ -56,18 +56,13 @@
             android:label="@string/app_name"
             android:noHistory="true"
             android:theme="@android:style/Theme.Material.Light.NoActionBar.Fullscreen" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".activities.MainActivity" >
         </activity>
         <activity
             android:name=".activities.GroupCreateActivity"
-            android:noHistory="true"
-            android:label="@string/title_activity_group_create" >
+            android:label="@string/title_activity_group_create"
+            android:noHistory="true" >
         </activity>
         <activity android:name=".activities.GroupContentActivity" >
         </activity>
@@ -114,8 +109,17 @@
         </activity>
         <activity
             android:name=".activities.GroupTypeActivity"
-            android:noHistory="true"
-            android:label="@string/title_activity_group_type" >
+            android:label="@string/title_activity_group_type"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name=".activities.AutoGenBookShowActivity"
+            android:label="@string/title_activity_auto_gen_book_show" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
