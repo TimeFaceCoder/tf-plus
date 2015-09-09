@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.EventContentActivity;
 import com.github.rayboot.tf_plus.activities.TempActivity;
+import com.github.rayboot.tf_plus.models.MessageObj;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -86,7 +87,9 @@ public class MessageView extends FrameLayout {
         });
     }
 
-    public void bindItem() {
-
+    public void bindItem(MessageObj object) {
+        mTvTitle.setText(object.title);
+        mTvContent.setText(object.content);
+        mAvatar.bindItem(object.author);
     }
 }

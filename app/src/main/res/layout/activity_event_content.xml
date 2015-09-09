@@ -218,30 +218,37 @@
 
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

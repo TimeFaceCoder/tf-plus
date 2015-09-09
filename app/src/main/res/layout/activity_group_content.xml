@@ -128,17 +128,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <com.github.rayboot.tf_plus.views.ItemRecommendView1
-                style="@style/CardStyle"
-                android:id="@+id/recommend2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView1-->
+                <!--style="@style/CardStyle"-->
+                <!--android:id="@+id/recommend2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
 
-            <com.github.rayboot.tf_plus.views.ItemRecommendView1
-                style="@style/CardStyle"
-                android:id="@+id/recommend3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView1-->
+                <!--style="@style/CardStyle"-->
+                <!--android:id="@+id/recommend3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
 
             <com.github.rayboot.tf_plus.views.AutoGenBookView
                 style="@style/CardStyle"

@@ -44,27 +44,70 @@
                 android:text="所有信息"/>
 
             <com.github.rayboot.tf_plus.views.ItemADView
+                android:id="@+id/ad"
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.EventAlertLayout
+                android:id="@+id/eventAlert"
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                android:id="@+id/recommend11"
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView1-->
+                <!--android:id="@+id/recommend12"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView1-->
+                <!--android:id="@+id/recommend13"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
             <com.github.rayboot.tf_plus.views.ItemRecommendView2
+                android:id="@+id/recommend21"
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView2-->
+                <!--android:id="@+id/recommend22"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView2-->
+                <!--android:id="@+id/recommend23"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView2-->
+                <!--android:id="@+id/recommend24"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
             <com.github.rayboot.tf_plus.views.ItemRecommendView
+                android:id="@+id/recommend01"
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView-->
+                <!--android:id="@+id/recommend02"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+            <!--<com.github.rayboot.tf_plus.views.ItemRecommendView-->
+                <!--android:id="@+id/recommend03"-->
+                <!--style="@style/CardStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
             <com.github.rayboot.tf_plus.views.MessageView
+                android:id="@+id/messageView"
                 style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
