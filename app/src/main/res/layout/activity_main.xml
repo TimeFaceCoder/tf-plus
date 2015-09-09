@@ -35,6 +35,14 @@
             android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnClick"
+                android:text="所有信息"/>
+
             <com.github.rayboot.tf_plus.views.ItemADView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

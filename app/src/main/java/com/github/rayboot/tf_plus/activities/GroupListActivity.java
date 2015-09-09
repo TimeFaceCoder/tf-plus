@@ -1,18 +1,42 @@
 package com.github.rayboot.tf_plus.activities;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.github.rayboot.tf_plus.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class GroupListActivity extends AppCompatActivity {
+
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+    @Bind(R.id.fab)
+    FloatingActionButton mFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_list);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void onFabClick(View view) {
+        startActivity(new Intent(this, SearchActivity.class));
+    }
+
+    public void onBtnClick(View view) {
+        finish();
     }
 
     @Override
@@ -32,6 +56,8 @@ public class GroupListActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if (id == android.R.id.home) {
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
