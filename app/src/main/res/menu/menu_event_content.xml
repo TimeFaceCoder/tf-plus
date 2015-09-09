@@ -19,7 +19,7 @@
         android:orderInCategory="100"
         app:showAsAction="always"
         android:icon="@drawable/ic_note_add_white_24dp"
-        android:title="一键成书"/>
+        android:title="创建时光书"/>
     <item
         android:id="@+id/action_event_books"
         android:orderInCategory="100"
