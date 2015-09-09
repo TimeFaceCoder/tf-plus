@@ -12,4 +12,8 @@ public class ADObj {
         this.imageUrl = imageUrl;
         this.url = url;
     }
+
+    public static ADObj getAny() {
+        return new ADObj("", "http://www.baidu.com");
+    }
 }

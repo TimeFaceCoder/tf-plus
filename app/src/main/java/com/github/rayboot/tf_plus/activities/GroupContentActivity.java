@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -13,6 +14,11 @@ import android.view.View;
 
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.models.GroupObj;
+import com.github.rayboot.tf_plus.views.AutoGenBookView;
+import com.github.rayboot.tf_plus.views.EventAlertLayout;
+import com.github.rayboot.tf_plus.views.ItemRecommendView1;
+import com.github.rayboot.tf_plus.views.MessageView;
+import com.github.rayboot.tf_plus.views.TreeLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,6 +31,28 @@ public class GroupContentActivity extends AppCompatActivity {
     @Bind(R.id.root)
     CoordinatorLayout mRoot;
     int type = GroupObj.TYPE_FRIEND;
+    @Bind(R.id.tree1)
+    TreeLayout mTree1;
+    @Bind(R.id.tree2)
+    TreeLayout mTree2;
+    @Bind(R.id.tree3)
+    TreeLayout mTree3;
+    @Bind(R.id.eventAlert)
+    EventAlertLayout mEventAlert;
+    @Bind(R.id.recommend1)
+    ItemRecommendView1 mRecommend1;
+    @Bind(R.id.recommend2)
+    ItemRecommendView1 mRecommend2;
+    @Bind(R.id.recommend3)
+    ItemRecommendView1 mRecommend3;
+    @Bind(R.id.autoGenBook)
+    AutoGenBookView mAutoGenBook;
+    @Bind(R.id.message1)
+    MessageView mMessage1;
+    @Bind(R.id.message5)
+    MessageView mMessage5;
+    @Bind(R.id.fab)
+    FloatingActionButton mFab;
 
     public static void open(Context context, int type) {
         Intent intent = new Intent(context, GroupContentActivity.class);
@@ -42,6 +70,33 @@ public class GroupContentActivity extends AppCompatActivity {
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        switch (type) {
+            case GroupObj.TYPE_FRIEND:
+                mTree1.setVisibility(View.GONE);
+                mTree2.setVisibility(View.GONE);
+                mTree3.setVisibility(View.GONE);
+                break;
+            case GroupObj.TYPE_BABY:
+                mTree1.bindItem(type, TreeLayout.TYPE_CREATE_TREE);
+                mTree2.bindItem(type, TreeLayout.TYPE_VERIFY_TREE);
+                mTree3.setVisibility(View.GONE);
+                break;
+            case GroupObj.TYPE_STUDENT:
+            case GroupObj.TYPE_FAMILY:
+                mTree1.bindItem(type, TreeLayout.TYPE_CREATE_TREE);
+                mTree2.bindItem(type, TreeLayout.TYPE_VERIFY_TREE);
+                mTree3.bindItem(type, TreeLayout.TYPE_INFO_TREE);
+                break;
+            case GroupObj.TYPE_STAR:
+            case GroupObj.TYPE_COM:
+                mTree1.setVisibility(View.GONE);
+                mTree2.bindItem(type, TreeLayout.TYPE_VERIFY_TREE);
+                mTree3.setVisibility(View.GONE);
+                break;
+        }
+
     }
 
     @Override

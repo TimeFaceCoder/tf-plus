@@ -100,10 +100,38 @@
             android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.github.rayboot.tf_plus.views.UploadContactsLayout
-                android:id="@+id/uploadContacts"
+            <com.github.rayboot.tf_plus.views.TreeLayout
+                android:id="@+id/tree1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            <com.github.rayboot.tf_plus.views.TreeLayout
+                android:id="@+id/tree2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.github.rayboot.tf_plus.views.TreeLayout
+                android:id="@+id/tree3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.github.rayboot.tf_plus.views.EventAlertLayout
+                android:id="@+id/eventAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                android:id="@+id/recommend1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                android:id="@+id/recommend2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                android:id="@+id/recommend3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.AutoGenBookView
                 android:id="@+id/autoGenBook"
@@ -112,21 +140,6 @@
 
             <com.github.rayboot.tf_plus.views.MessageView
                 android:id="@+id/message1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <com.github.rayboot.tf_plus.views.MessageView
-                android:id="@+id/message2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <com.github.rayboot.tf_plus.views.MessageView
-                android:id="@+id/message3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <com.github.rayboot.tf_plus.views.MessageView
-                android:id="@+id/message4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
