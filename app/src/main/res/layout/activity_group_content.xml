@@ -101,49 +101,59 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <com.github.rayboot.tf_plus.views.TreeLayout
+                style="@style/CardStyle"
                 android:id="@+id/tree1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <com.github.rayboot.tf_plus.views.TreeLayout
+                style="@style/CardStyle"
                 android:id="@+id/tree2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <com.github.rayboot.tf_plus.views.TreeLayout
+                style="@style/CardStyle"
                 android:id="@+id/tree3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.EventAlertLayout
+                style="@style/CardStyle"
                 android:id="@+id/eventAlert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                style="@style/CardStyle"
                 android:id="@+id/recommend1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                style="@style/CardStyle"
                 android:id="@+id/recommend2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                style="@style/CardStyle"
                 android:id="@+id/recommend3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.AutoGenBookView
+                style="@style/CardStyle"
                 android:id="@+id/autoGenBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:id="@+id/message1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:id="@+id/message5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

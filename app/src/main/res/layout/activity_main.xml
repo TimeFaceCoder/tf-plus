@@ -44,22 +44,28 @@
                 android:text="所有信息"/>
 
             <com.github.rayboot.tf_plus.views.ItemADView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.EventAlertLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <com.github.rayboot.tf_plus.views.ItemRecommendView1
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.ItemRecommendView2
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.ItemRecommendView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.MessageView
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

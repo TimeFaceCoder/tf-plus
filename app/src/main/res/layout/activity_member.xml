@@ -38,33 +38,43 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.github.rayboot.tf_plus.views.UserLayout
+                style="@style/CardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

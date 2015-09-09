@@ -18,4 +18,9 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="CardStyle">
+        <item name="android:layout_marginTop">@dimen/small</item>
+        <item name="android:layout_marginBottom">@dimen/small</item>
+    </style>
+
 </resources>
