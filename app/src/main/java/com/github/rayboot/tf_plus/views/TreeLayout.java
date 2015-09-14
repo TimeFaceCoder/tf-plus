@@ -114,10 +114,10 @@ public class TreeLayout extends FrameLayout {
                 if (type == TYPE_CREATE_TREE) {
                     mTvDesc.setText("创建你的族谱\n@#￥%*（）");
                     mBtnAdd.setText("创建");
-                }else if (type == TYPE_VERIFY_TREE) {
+                } else if (type == TYPE_VERIFY_TREE) {
                     mTvDesc.setText("族谱已创建\n去看看有木有你");
                     mBtnAdd.setText("认领身份");
-                }else if (type == TYPE_INFO_TREE) {
+                } else if (type == TYPE_INFO_TREE) {
                     mTvDesc.setText("完善一下你的资料吧\n让家族的人更了解你");
                     mBtnAdd.setText("完善资料");
                 }
@@ -126,7 +126,7 @@ public class TreeLayout extends FrameLayout {
                 if (type == TYPE_CREATE_TREE) {
                     mTvDesc.setText("创建你的家谱\n@#￥%*（）");
                     mBtnAdd.setText("创建");
-                }else if (type == TYPE_VERIFY_TREE) {
+                } else if (type == TYPE_VERIFY_TREE) {
                     mTvDesc.setText("家谱已创建\n去认领你的身份");
                     mBtnAdd.setText("认领身份");
                 }
@@ -135,10 +135,10 @@ public class TreeLayout extends FrameLayout {
                 if (type == TYPE_CREATE_TREE) {
                     mTvDesc.setText("上传你的通讯录\n让我们更了解你");
                     mBtnAdd.setText("上传文件");
-                }else if (type == TYPE_VERIFY_TREE) {
+                } else if (type == TYPE_VERIFY_TREE) {
                     mTvDesc.setText("圈住已上传你们的通讯录\n去看看有木有你");
                     mBtnAdd.setText("认领身份");
-                }else if (type == TYPE_INFO_TREE) {
+                } else if (type == TYPE_INFO_TREE) {
                     mTvDesc.setText("完善一下你的资料吧\n让我们更了解你");
                     mBtnAdd.setText("完善资料");
                 }

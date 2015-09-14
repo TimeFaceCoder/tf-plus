@@ -41,7 +41,7 @@ public class GroupContentActivity extends AppCompatActivity {
     EventAlertLayout mEventAlert;
     @Bind(R.id.recommend1)
     ItemRecommendView1 mRecommend1;
-//    @Bind(R.id.recommend2)
+    //    @Bind(R.id.recommend2)
 //    ItemRecommendView1 mRecommend2;
 //    @Bind(R.id.recommend3)
 //    ItemRecommendView1 mRecommend3;

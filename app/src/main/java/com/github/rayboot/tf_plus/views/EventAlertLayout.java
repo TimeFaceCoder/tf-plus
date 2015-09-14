@@ -9,10 +9,11 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.EventContentActivity;
 import com.github.rayboot.tf_plus.activities.EventListActivity;
+
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
  */
 public class EventAlertLayout extends FrameLayout {
     @Bind(R.id.ivUserLogo)
-    SimpleDraweeView mIvUserLogo;
+    RatioImageView mIvUserLogo;
     @Bind(R.id.tvTitle)
     TextView mTvTitle;
     @Bind(R.id.tvTime)

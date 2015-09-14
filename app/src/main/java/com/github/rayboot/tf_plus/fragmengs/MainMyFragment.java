@@ -1,9 +1,7 @@
 package com.github.rayboot.tf_plus.fragmengs;
 
-import android.app.Activity;
-import android.net.Uri;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +26,10 @@ public class MainMyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    public MainMyFragment() {
+        // Required empty public constructor
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -44,10 +46,6 @@ public class MainMyFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public MainMyFragment() {
-        // Required empty public constructor
     }
 
     @Override

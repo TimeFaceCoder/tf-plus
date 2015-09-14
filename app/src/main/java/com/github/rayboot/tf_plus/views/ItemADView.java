@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.ADObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -21,7 +23,7 @@ import butterknife.ButterKnife;
  */
 public class ItemADView extends FrameLayout {
     @Bind(R.id.image)
-    SimpleDraweeView mImage;
+    RatioImageView mImage;
 
     public ItemADView(Context context) {
         super(context);
@@ -57,7 +59,8 @@ public class ItemADView extends FrameLayout {
     }
 
     public void bindItem(ADObj adObj) {
-        mImage.setImageURI(Uri.parse(adObj.imageUrl));
+        PicUtil.getPicasso().load(Uri.parse(adObj.imageUrl)).into(mImage);
+
         mImage.setTag(R.string.tag_obj, adObj);
     }
 }

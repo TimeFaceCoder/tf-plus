@@ -2,15 +2,23 @@ package com.github.rayboot.tf_plus;
 
 import android.app.Application;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
-
 /**
  * Created by rayboot on 15/8/25.
  */
 public class App extends Application {
+
+    private static App app;
+
+    public static App getApp() {
+        if (app == null) {
+            app = new App();
+        }
+        return app;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
-        Fresco.initialize(this);
+        app = this;
     }
 }

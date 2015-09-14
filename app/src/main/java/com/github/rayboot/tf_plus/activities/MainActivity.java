@@ -41,28 +41,28 @@ public class MainActivity extends AppCompatActivity {
     ItemADView mAd;
     @Bind(R.id.eventAlert)
     EventAlertLayout mEventAlert;
-//    @Bind(R.id.recommend11)
-//    ItemRecommendView1 mRecommend11;
-//    @Bind(R.id.recommend12)
-//    ItemRecommendView1 mRecommend12;
-//    @Bind(R.id.recommend13)
-//    ItemRecommendView1 mRecommend13;
-//    @Bind(R.id.recommend21)
-//    ItemRecommendView2 mRecommend21;
-//    @Bind(R.id.recommend22)
-//    ItemRecommendView2 mRecommend22;
-//    @Bind(R.id.recommend23)
-//    ItemRecommendView2 mRecommend23;
-//    @Bind(R.id.recommend24)
-//    ItemRecommendView2 mRecommend24;
-//    @Bind(R.id.recommend01)
-//    ItemRecommendView mRecommend01;
-//    @Bind(R.id.recommend02)
-//    ItemRecommendView mRecommend02;
-//    @Bind(R.id.recommend03)
-//    ItemRecommendView mRecommend03;
-//    @Bind(R.id.messageView)
-//    MessageView mMessageView;
+    @Bind(R.id.recommend11)
+    ItemRecommendView1 mRecommend11;
+    @Bind(R.id.recommend12)
+    ItemRecommendView1 mRecommend12;
+    @Bind(R.id.recommend13)
+    ItemRecommendView1 mRecommend13;
+    @Bind(R.id.recommend21)
+    ItemRecommendView2 mRecommend21;
+    @Bind(R.id.recommend22)
+    ItemRecommendView2 mRecommend22;
+    @Bind(R.id.recommend23)
+    ItemRecommendView2 mRecommend23;
+    @Bind(R.id.recommend24)
+    ItemRecommendView2 mRecommend24;
+    @Bind(R.id.recommend01)
+    ItemRecommendView mRecommend01;
+    @Bind(R.id.recommend02)
+    ItemRecommendView mRecommend02;
+    @Bind(R.id.recommend03)
+    ItemRecommendView mRecommend03;
+    @Bind(R.id.messageView)
+    MessageView mMessageView;
 
 
     @Override
@@ -76,20 +76,20 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.addTab(mTabLayout.newTab().setText("书架"));
         mTabLayout.addTab(mTabLayout.newTab().setText("个人中心"));
 
-//        mRecommend11.bindItem(BookObj.getAny(), BookObj.getAny());
-//        mRecommend12.bindItem(GroupObj.getAny(), GroupObj.getAny());
-//        mRecommend13.bindItem(GameObj.getAny(), GameObj.getAny());
-//
-//        mRecommend21.bindItem(BookObj.getAny());
-//        mRecommend22.bindItem(GroupObj.getAny());
-//        mRecommend23.bindItem(GameObj.getAny());
-//        mRecommend24.bindItem(UserObj.getAny());
-//
-//        mRecommend01.bindItem(BookObj.getAny(), BookObj.getAny());
-//        mRecommend02.bindItem(GroupObj.getAny(), GroupObj.getAny());
-//        mRecommend03.bindItem(GameObj.getAny(), GameObj.getAny());
-//
-//        mMessageView.bindItem(MessageObj.getAny());
+        mRecommend11.bindItem(BookObj.getAny(), BookObj.getAny());
+        mRecommend12.bindItem(GroupObj.getAny(), GroupObj.getAny());
+        mRecommend13.bindItem(GameObj.getAny(), GameObj.getAny());
+
+        mRecommend21.bindItem(BookObj.getAny());
+        mRecommend22.bindItem(GroupObj.getAny());
+        mRecommend23.bindItem(GameObj.getAny());
+        mRecommend24.bindItem(UserObj.getAny());
+
+        mRecommend01.bindItem(BookObj.getAny(), BookObj.getAny());
+        mRecommend02.bindItem(GroupObj.getAny(), GroupObj.getAny());
+        mRecommend03.bindItem(GameObj.getAny(), GameObj.getAny());
+
+        mMessageView.bindItem(MessageObj.getAny());
 
     }
 

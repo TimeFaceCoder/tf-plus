@@ -9,12 +9,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
-import com.facebook.drawee.backends.pipeline.PipelineDraweeController;
-import com.facebook.drawee.view.SimpleDraweeView;
-import com.facebook.imagepipeline.common.ResizeOptions;
-import com.facebook.imagepipeline.request.ImageRequest;
-import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.BookDetailActivity;
 import com.github.rayboot.tf_plus.activities.GroupContentActivity;
@@ -22,6 +16,10 @@ import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.BookObj;
 import com.github.rayboot.tf_plus.models.GameObj;
 import com.github.rayboot.tf_plus.models.GroupObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.RatioDatumMode;
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,13 +30,13 @@ import butterknife.ButterKnife;
  */
 public class CommonView extends LinearLayout {
     @Bind(R.id.ivImg)
-    SimpleDraweeView mIvImg;
+    RatioImageView mIvImg;
     @Bind(R.id.tvTitle)
     TextView mTvTitle;
     @Bind(R.id.tvSubTitle)
     TextView mTvSubTitle;
     @Bind(R.id.ivDesc)
-    SimpleDraweeView mIvDesc;
+    RatioImageView mIvDesc;
     @Bind(R.id.tvDesc)
     TextView mTvDesc;
     @Bind(R.id.llDesc)
@@ -76,9 +74,9 @@ public class CommonView extends LinearLayout {
                 Object object = v.getTag(R.string.tag_obj);
                 if (object instanceof BookObj) {
                     getContext().startActivity(new Intent(getContext(), BookDetailActivity.class));
-                }else if (object instanceof GroupObj) {
+                } else if (object instanceof GroupObj) {
                     GroupContentActivity.open(getContext(), GroupObj.TYPE_FRIEND);
-                }else if (object instanceof GameObj) {
+                } else if (object instanceof GameObj) {
                     TempActivity.open(getContext(), "游戏详情页面");
                 }
             }
@@ -90,25 +88,25 @@ public class CommonView extends LinearLayout {
         mRoot.setTag(R.string.tag_obj, object);
         if (object instanceof BookObj) {
             BookObj item = (BookObj) object;
-            mIvImg.setImageURI(Uri.parse(item.image));
-            mIvImg.setAspectRatio(1.0f);
+            mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvImg);
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.author.name + " 著");
         } else if (object instanceof GroupObj) {
             GroupObj item = (GroupObj) object;
-            mIvImg.setImageURI(Uri.parse(item.image));
-            mIvImg.setAspectRatio(1.0f);
+            mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvImg);
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
         } else if (object instanceof GameObj) {
             GameObj item = (GameObj) object;
-            mIvImg.setAspectRatio(1.0f);
-            mIvImg.setImageURI(Uri.parse(item.image));
+            mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvImg);
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
             mLlDesc.setVisibility(VISIBLE);
-            mIvDesc.setImageURI(Uri.parse(item.friend.image));
-            mIvDesc.setAspectRatio(1.0f);
+            mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvDesc);
             mTvDesc.setText(item.friendCount + "个好友也在玩");
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:ratio="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,14 +10,13 @@
     android:gravity="center_vertical"
     android:orientation="horizontal">
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <net.soulwolf.widget.ratiolayout.widget.RatioImageView
         android:id="@+id/ivLogo"
         android:layout_width="@dimen/h_48"
         android:layout_height="@dimen/h_48"
         android:layout_margin="@dimen/normal"
-        fresco:placeholderImage="@mipmap/ic_launcher"
-        fresco:placeholderImageScaleType="centerCrop"
-        fresco:roundAsCircle="true" />
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tvName"

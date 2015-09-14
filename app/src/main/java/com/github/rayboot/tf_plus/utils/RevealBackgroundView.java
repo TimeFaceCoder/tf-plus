@@ -24,13 +24,10 @@ public class RevealBackgroundView extends View {
 
     private static final Interpolator INTERPOLATOR = new AccelerateInterpolator();
     private static final int FILL_TIME = 300;
-
+    ObjectAnimator revealAnimator;
     private int state = STATE_NOT_STARTED;
-
     private Paint fillPaint;
     private int currentRadius;
-    ObjectAnimator revealAnimator;
-
     private int startLocationX;
     private int startLocationY;
 

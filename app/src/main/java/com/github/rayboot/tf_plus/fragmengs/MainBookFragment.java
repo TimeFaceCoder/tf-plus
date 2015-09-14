@@ -25,6 +25,10 @@ public class MainBookFragment extends Fragment {
     private String mParam2;
 
 
+    public MainBookFragment() {
+        // Required empty public constructor
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -41,10 +45,6 @@ public class MainBookFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public MainBookFragment() {
-        // Required empty public constructor
     }
 
     @Override

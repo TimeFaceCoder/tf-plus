@@ -41,14 +41,13 @@
             android:orientation="horizontal"
             android:padding="@dimen/medium">
 
-            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            <net.soulwolf.widget.ratiolayout.widget.RatioImageView xmlns:ratio="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/ivUserLogo"
                 android:layout_width="@dimen/h_56"
                 android:layout_height="@dimen/h_56"
                 android:layout_marginRight="@dimen/normal"
-                fresco:actualImageScaleType="centerCrop"
-                fresco:placeholderImage="@mipmap/ic_launcher"
-                fresco:roundAsCircle="true" />
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
                 android:layout_width="0dp"

@@ -26,6 +26,10 @@ public class MainHomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    public MainHomeFragment() {
+        // Required empty public constructor
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -42,10 +46,6 @@ public class MainHomeFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public MainHomeFragment() {
-        // Required empty public constructor
     }
 
     @Override

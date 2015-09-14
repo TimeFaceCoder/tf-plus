@@ -122,7 +122,7 @@ public class BookStoreActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-        } else if (id == android.R.id.home){
+        } else if (id == android.R.id.home) {
             this.finish();
         }
 

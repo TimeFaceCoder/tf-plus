@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.BookDetailActivity;
 import com.github.rayboot.tf_plus.activities.BookStoreActivity;
@@ -23,6 +22,10 @@ import com.github.rayboot.tf_plus.models.BookObj;
 import com.github.rayboot.tf_plus.models.GameObj;
 import com.github.rayboot.tf_plus.models.GroupObj;
 import com.github.rayboot.tf_plus.models.UserObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.RatioDatumMode;
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -40,7 +43,7 @@ public class ItemRecommendView2 extends LinearLayout {
     @Bind(R.id.btnMore)
     Button mBtnMore;
     @Bind(R.id.ivLogo)
-    SimpleDraweeView mIvLogo;
+    RatioImageView mIvLogo;
     @Bind(R.id.tvName)
     TextView mTvName;
     @Bind(R.id.btnAdd)
@@ -112,32 +115,32 @@ public class ItemRecommendView2 extends LinearLayout {
             BookObj item = (BookObj) obj;
             mTvTitle.setText("可能喜欢");
             mTvReason.setText("好友 非也君 也在看这本书");
-            mIvLogo.setAspectRatio(0.75f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 3, 4);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("去看看");
         } else if (obj instanceof GroupObj) {
             GroupObj item = (GroupObj) obj;
             mTvTitle.setText("推荐圈子");
             mTvReason.setText("好友 非也君 在这个圈里");
-            mIvLogo.setAspectRatio(1.0f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("去看看");
         } else if (obj instanceof GameObj) {
             GameObj item = (GameObj) obj;
             mTvTitle.setText("推荐游戏");
             mTvReason.setText("21位好友都在玩这个游戏");
-            mIvLogo.setAspectRatio(1.0f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("去看看");
         } else if (obj instanceof UserObj) {
             UserObj item = (UserObj) obj;
             mTvTitle.setText("可能认识");
             mTvReason.setText("与你有共同好友 非也君");
-            mIvLogo.setAspectRatio(1.0f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("+添加");
         }

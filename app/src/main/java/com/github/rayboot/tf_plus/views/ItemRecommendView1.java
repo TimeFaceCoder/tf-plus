@@ -10,9 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.rayboot.tf_plus.R;
-import com.github.rayboot.tf_plus.activities.BookDetailActivity;
 import com.github.rayboot.tf_plus.activities.BookStoreActivity;
-import com.github.rayboot.tf_plus.activities.GroupContentActivity;
 import com.github.rayboot.tf_plus.activities.GroupListActivity;
 import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.BookObj;
@@ -66,9 +64,9 @@ public class ItemRecommendView1 extends LinearLayout {
                 Object object = v.getTag(R.string.tag_obj);
                 if (object instanceof BookObj) {
                     BookStoreActivity.open(getContext(), 1);
-                }else if (object instanceof GroupObj) {
+                } else if (object instanceof GroupObj) {
                     getContext().startActivity(new Intent(getContext(), GroupListActivity.class));
-                }else if (object instanceof GameObj) {
+                } else if (object instanceof GameObj) {
                     TempActivity.open(getContext(), "游戏列表页");
                 }
             }

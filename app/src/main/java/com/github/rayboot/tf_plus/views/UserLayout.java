@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.UserObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +24,7 @@ import butterknife.ButterKnife;
  */
 public class UserLayout extends LinearLayout {
     @Bind(R.id.ivLogo)
-    SimpleDraweeView mIvLogo;
+    RatioImageView mIvLogo;
     @Bind(R.id.tvName)
     TextView mTvName;
     @Bind(R.id.root)
@@ -62,7 +64,7 @@ public class UserLayout extends LinearLayout {
 
     public void bindItem(Object object) {
         if (object instanceof UserObj) {
-            mIvLogo.setImageURI(Uri.parse(((UserObj) object).image));
+            PicUtil.getPicasso().load(Uri.parse(((UserObj) object).image)).into(mIvLogo);
             mTvName.setText(((UserObj) object).name);
         }
     }

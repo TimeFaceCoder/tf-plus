@@ -15,12 +15,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <net.soulwolf.widget.ratiolayout.widget.RatioImageView
             android:id="@+id/ivBook"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:scaleType="centerCrop"
-            app:placeholderImage="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/tvBookTitle"

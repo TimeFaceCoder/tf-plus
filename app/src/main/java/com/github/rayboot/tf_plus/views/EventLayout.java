@@ -10,12 +10,13 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.EventContentActivity;
 import com.shehabic.droppy.DroppyClickCallbackInterface;
 import com.shehabic.droppy.DroppyMenuItem;
 import com.shehabic.droppy.DroppyMenuPopup;
+
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -26,7 +27,7 @@ import butterknife.ButterKnife;
  */
 public class EventLayout extends FrameLayout {
     @Bind(R.id.ivEventLogo)
-    SimpleDraweeView mIvEventLogo;
+    RatioImageView mIvEventLogo;
     @Bind(R.id.tvState)
     TextView mTvState;
     @Bind(R.id.tvTitle)
@@ -36,7 +37,7 @@ public class EventLayout extends FrameLayout {
     @Bind(R.id.tvLocation)
     TextView mTvLocation;
     @Bind(R.id.ivUserLogo)
-    SimpleDraweeView mIvUserLogo;
+    RatioImageView mIvUserLogo;
     @Bind(R.id.ivState)
     View mIvState;
     @Bind(R.id.main)

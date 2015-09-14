@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.BookDetailActivity;
 import com.github.rayboot.tf_plus.activities.GroupContentActivity;
@@ -18,6 +17,10 @@ import com.github.rayboot.tf_plus.models.BookObj;
 import com.github.rayboot.tf_plus.models.GameObj;
 import com.github.rayboot.tf_plus.models.GroupObj;
 import com.github.rayboot.tf_plus.models.UserObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.RatioDatumMode;
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,7 +31,7 @@ import butterknife.ButterKnife;
  */
 public class CommonView1 extends FrameLayout {
     @Bind(R.id.ivLogo)
-    SimpleDraweeView mIvLogo;
+    RatioImageView mIvLogo;
     @Bind(R.id.tvTitle)
     TextView mTvTitle;
     @Bind(R.id.tvSubTitle)
@@ -66,11 +69,11 @@ public class CommonView1 extends FrameLayout {
                 Object object = v.getTag(R.string.tag_obj);
                 if (object instanceof BookObj) {
                     getContext().startActivity(new Intent(getContext(), BookDetailActivity.class));
-                }else if (object instanceof GroupObj) {
+                } else if (object instanceof GroupObj) {
                     GroupContentActivity.open(getContext(), GroupObj.TYPE_FRIEND);
-                }else if (object instanceof GameObj) {
+                } else if (object instanceof GameObj) {
                     TempActivity.open(getContext(), "游戏详情页面");
-                }else if (object instanceof UserObj) {
+                } else if (object instanceof UserObj) {
                     TempActivity.open(getContext(), "个人中心");
                 }
             }
@@ -81,25 +84,33 @@ public class CommonView1 extends FrameLayout {
         mRoot.setTag(R.string.tag_obj, object);
         if (object instanceof BookObj) {
             BookObj item = (BookObj) object;
-            mIvLogo.setAspectRatio(0.75f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 3, 4);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.author.name + " 著");
         } else if (object instanceof GroupObj) {
             GroupObj item = (GroupObj) object;
-            mIvLogo.setAspectRatio(1.0f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
         } else if (object instanceof UserObj) {
             UserObj item = (UserObj) object;
-            mIvLogo.setAspectRatio(1.0f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+
             mTvTitle.setText(item.name);
         } else if (object instanceof GameObj) {
             GameObj item = (GameObj) object;
-            mIvLogo.setAspectRatio(1.0f);
-            mIvLogo.setImageURI(Uri.parse(item.image));
+
+            mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+
             mTvTitle.setText(item.name);
         }
     }

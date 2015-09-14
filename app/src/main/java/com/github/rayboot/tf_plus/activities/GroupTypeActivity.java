@@ -3,12 +3,10 @@ package com.github.rayboot.tf_plus.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.github.rayboot.tf_plus.R;
-import com.github.rayboot.tf_plus.models.GroupObj;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,7 +27,7 @@ public class GroupTypeActivity extends AppCompatActivity {
     }
 
     public void onBtnClick(View view) {
-        GroupCreateActivity.open(this, Integer.valueOf((String)view.getTag()));
+        GroupCreateActivity.open(this, Integer.valueOf((String) view.getTag()));
     }
 
     @Override
@@ -42,7 +40,7 @@ public class GroupTypeActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-        }else if (id == android.R.id.home) {
+        } else if (id == android.R.id.home) {
             finish();
             return true;
         }

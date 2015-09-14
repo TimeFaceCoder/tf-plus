@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:ratio="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:background="@android:color/white"
     android:layout_width="match_parent"
@@ -8,12 +8,12 @@
     android:clickable="true">
 
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <net.soulwolf.widget.ratiolayout.widget.RatioImageView
         android:id="@+id/ivEventLogo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        fresco:placeholderImage="@mipmap/ic_launcher"
-        fresco:placeholderImageScaleType="centerCrop" />
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:id="@+id/main"
@@ -73,14 +73,14 @@
 
     </LinearLayout>
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <net.soulwolf.widget.ratiolayout.widget.RatioImageView
         android:id="@+id/ivUserLogo"
         android:layout_width="@dimen/h_56"
         android:layout_height="@dimen/h_56"
         android:layout_gravity="center_vertical|left"
         android:layout_margin="@dimen/normal"
-        fresco:placeholderImage="@mipmap/ic_launcher"
-        fresco:placeholderImageScaleType="centerCrop" />
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop" />
 
     <View
         android:id="@+id/ivState"

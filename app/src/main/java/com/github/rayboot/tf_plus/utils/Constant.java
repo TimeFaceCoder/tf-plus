@@ -64,7 +64,7 @@ public class Constant {
             "http://www.timeface.cn/uploads/album/2015/06/04142125_jSBcQz.jpg",
             "http://www.timeface.cn/uploads/podorder/2015/06/03/17/4445_UHnV7W.jpg"};
 
-    public static String[] groupNames = {"时光流影足球圈", "江淮汽车圈","亲子圈","高中同学"};
+    public static String[] groupNames = {"时光流影足球圈", "江淮汽车圈", "亲子圈", "高中同学"};
     public static String[] groupImages = {
             "http://www.timeface.cn/uploads/album/2015/06/09/155139_nkDvda.jpg",
             "http://www.timeface.cn/uploads/album/2015/06/08/105727_Ecu9u0.jpg",
@@ -172,8 +172,7 @@ public class Constant {
     };
 
 
-
-    public static String[] gameNames = {"撕名牌", "掼蛋","斗地主","拔河"};
+    public static String[] gameNames = {"撕名牌", "掼蛋", "斗地主", "拔河"};
     public static String[] gameImages = {
             "http://www.timeface.cn/uploads/album/2015/06/09/155139_nkDvda.jpg",
             "http://www.timeface.cn/uploads/album/2015/06/08/105727_Ecu9u0.jpg",

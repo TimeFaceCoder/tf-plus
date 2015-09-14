@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.GroupContentActivity;
 import com.github.rayboot.tf_plus.activities.TempActivity;
 import com.github.rayboot.tf_plus.models.GroupObj;
 import com.github.rayboot.tf_plus.models.UserObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,7 +26,7 @@ import butterknife.ButterKnife;
  */
 public class AvatarLayout extends RelativeLayout {
     @Bind(R.id.ivImg)
-    SimpleDraweeView mIvImg;
+    RatioImageView mIvImg;
     @Bind(R.id.tvName)
     TextView mTvName;
     @Bind(R.id.tvFrom)
@@ -77,7 +79,7 @@ public class AvatarLayout extends RelativeLayout {
     }
 
     public void bindItem(UserObj userObj) {
-        mIvImg.setImageURI(Uri.parse(userObj.image));
         mTvName.setText("Rayboot >管理员");
+        PicUtil.getPicasso().load(Uri.parse(userObj.image)).into(mIvImg);
     }
 }

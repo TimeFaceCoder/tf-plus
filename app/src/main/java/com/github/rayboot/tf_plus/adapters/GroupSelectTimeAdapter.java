@@ -32,7 +32,9 @@ public class GroupSelectTimeAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     }
 
 
-    /** References to the views for each data item **/
+    /**
+     * References to the views for each data item
+     **/
     public class BookViewHolder extends SwipeToAction.ViewHolder<String> {
         public BookViewHolder(View v) {
             super(v);

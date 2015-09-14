@@ -8,10 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.AutoGenBookShowActivity;
 import com.github.rayboot.tf_plus.models.BookObj;
+import com.github.rayboot.tf_plus.utils.PicUtil;
+
+import net.soulwolf.widget.ratiolayout.RatioDatumMode;
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +25,7 @@ import butterknife.ButterKnife;
  */
 public class AutoGenBookView extends LinearLayout {
     @Bind(R.id.ivBookCover)
-    SimpleDraweeView mIvBookCover;
+    RatioImageView mIvBookCover;
     @Bind(R.id.root)
     LinearLayout mRoot;
 
@@ -59,8 +62,8 @@ public class AutoGenBookView extends LinearLayout {
     }
 
     public void bindItem(BookObj bookObj) {
-        mIvBookCover.setAspectRatio(0.75f);
-        mIvBookCover.setImageURI(Uri.parse(bookObj.image));
+        mIvBookCover.setRatio(RatioDatumMode.DATUM_WIDTH, 3, 4);
+        PicUtil.getPicasso().load(Uri.parse(bookObj.image)).into(mIvBookCover);
 
     }
 }

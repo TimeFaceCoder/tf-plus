@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.rayboot.tf_plus.R;
 import com.github.rayboot.tf_plus.activities.BookDetailActivity;
+
+import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
  */
 public class BookView extends CardView {
     @Bind(R.id.ivBook)
-    SimpleDraweeView mIvBook;
+    RatioImageView mIvBook;
     @Bind(R.id.tvBookTitle)
     TextView mTvBookTitle;
     @Bind(R.id.tvAuthorName)

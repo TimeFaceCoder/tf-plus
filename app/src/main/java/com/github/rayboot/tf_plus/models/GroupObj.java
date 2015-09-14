@@ -9,18 +9,16 @@ import java.util.Random;
  * email : sy0725work@gmail.com
  */
 public class GroupObj {
-    public String name;
-    public String image;
-    public int userCount;
-    public int type = 0;
-
-
     public static final int TYPE_FRIEND = 0;
     public static final int TYPE_BABY = 1;
     public static final int TYPE_STUDENT = 2;
     public static final int TYPE_STAR = 3;
     public static final int TYPE_FAMILY = 4;
     public static final int TYPE_COM = 5;
+    public String name;
+    public String image;
+    public int userCount;
+    public int type = 0;
 
     public GroupObj(String name, String image, int userCount, int type) {
         this.name = name;

@@ -37,7 +37,9 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'co.dift.ui.swipetoaction:library:1.1'
     compile 'com.infstory:recyclerlist:1.0.0'
-    compile 'com.facebook.fresco:fresco:0.6.1'
-    compile 'com.facebook.fresco:imagepipeline-okhttp:0.6.1'
     compile 'com.shehabic.droppy:Droppy:0.2.5.1@aar'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
+    compile 'jp.wasabeef:picasso-transformations:1.1.0'
 }
