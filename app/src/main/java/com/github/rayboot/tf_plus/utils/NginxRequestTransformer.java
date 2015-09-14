@@ -1,6 +1,7 @@
 package com.github.rayboot.tf_plus.utils;
 
 import android.net.Uri;
+import android.util.Log;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Request;
@@ -41,7 +42,7 @@ public class NginxRequestTransformer implements Picasso.RequestTransformer {
                 + uri.getPath().substring(uri.getPath().indexOf("."));
         String newImageUrl = imgUrl + nginxEx;
 
-//        System.out.println("111111    new image url = " + newImageUrl);
+        Log.e("aaa", "transformRequest " + newImageUrl);
         newRequest.setUri(Uri.parse(newImageUrl));
 
         return newRequest.build();

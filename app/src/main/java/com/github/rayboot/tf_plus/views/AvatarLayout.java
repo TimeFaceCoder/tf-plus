@@ -19,6 +19,7 @@ import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 /**
  * author: rayboot  Created on 15/9/7.
@@ -80,6 +81,7 @@ public class AvatarLayout extends RelativeLayout {
 
     public void bindItem(UserObj userObj) {
         mTvName.setText("Rayboot >管理员");
-        PicUtil.getPicasso().load(Uri.parse(userObj.image)).into(mIvImg);
+        PicUtil.getPicasso().load(Uri.parse(userObj.image)).centerCrop().fit()
+                .transform(new CropCircleTransformation()).into(mIvImg);
     }
 }

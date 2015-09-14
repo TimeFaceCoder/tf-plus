@@ -41,7 +41,7 @@ public class BookStoreViewHolder extends BindViewHolder<BookStoreItem> {
 
     @Override
     public void onBind(int i, BookStoreItem bookStoreItem) {
-        PicUtil.getPicasso().load(Uri.parse(bookStoreItem.image)).into(mIvBook);
+        PicUtil.getPicasso().load(Uri.parse(bookStoreItem.image)).centerCrop().into(mIvBook);
         mTvBookTitle.setText(bookStoreItem.title);
         mTvAuthorName.setText(bookStoreItem.author);
         mRoot.setOnClickListener(this.listener);

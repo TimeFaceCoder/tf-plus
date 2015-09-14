@@ -64,7 +64,7 @@ public class UserLayout extends LinearLayout {
 
     public void bindItem(Object object) {
         if (object instanceof UserObj) {
-            PicUtil.getPicasso().load(Uri.parse(((UserObj) object).image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(((UserObj) object).image)).centerCrop().into(mIvLogo);
             mTvName.setText(((UserObj) object).name);
         }
     }

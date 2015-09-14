@@ -23,6 +23,7 @@ import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 /**
  * author: rayboot  Created on 15/9/6.
@@ -89,24 +90,24 @@ public class CommonView extends LinearLayout {
         if (object instanceof BookObj) {
             BookObj item = (BookObj) object;
             mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvImg);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvImg);
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.author.name + " 著");
         } else if (object instanceof GroupObj) {
             GroupObj item = (GroupObj) object;
             mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvImg);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvImg);
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
         } else if (object instanceof GameObj) {
             GameObj item = (GameObj) object;
             mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvImg);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvImg);
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
             mLlDesc.setVisibility(VISIBLE);
             mIvImg.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvDesc);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().transform(new CropCircleTransformation()).into(mIvDesc);
             mTvDesc.setText(item.friendCount + "个好友也在玩");
         }
     }

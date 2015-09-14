@@ -59,7 +59,7 @@ public class ItemADView extends FrameLayout {
     }
 
     public void bindItem(ADObj adObj) {
-        PicUtil.getPicasso().load(Uri.parse(adObj.imageUrl)).into(mImage);
+        PicUtil.getPicasso().load(Uri.parse(adObj.imageUrl)).centerCrop().into(mImage);
 
         mImage.setTag(R.string.tag_obj, adObj);
     }

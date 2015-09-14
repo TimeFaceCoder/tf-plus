@@ -86,7 +86,7 @@ public class CommonView1 extends FrameLayout {
             BookObj item = (BookObj) object;
 
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 3, 4);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
 
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.author.name + " 著");
@@ -94,7 +94,7 @@ public class CommonView1 extends FrameLayout {
             GroupObj item = (GroupObj) object;
 
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
 
             mTvTitle.setText(item.name);
             mTvSubTitle.setText(item.userCount + "参与其中");
@@ -102,14 +102,14 @@ public class CommonView1 extends FrameLayout {
             UserObj item = (UserObj) object;
 
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).centerCrop().into(mIvLogo);
 
             mTvTitle.setText(item.name);
         } else if (object instanceof GameObj) {
             GameObj item = (GameObj) object;
 
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
 
             mTvTitle.setText(item.name);
         }

@@ -116,7 +116,7 @@ public class ItemRecommendView2 extends LinearLayout {
             mTvTitle.setText("可能喜欢");
             mTvReason.setText("好友 非也君 也在看这本书");
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 3, 4);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("去看看");
         } else if (obj instanceof GroupObj) {
@@ -124,7 +124,7 @@ public class ItemRecommendView2 extends LinearLayout {
             mTvTitle.setText("推荐圈子");
             mTvReason.setText("好友 非也君 在这个圈里");
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("去看看");
         } else if (obj instanceof GameObj) {
@@ -132,7 +132,7 @@ public class ItemRecommendView2 extends LinearLayout {
             mTvTitle.setText("推荐游戏");
             mTvReason.setText("21位好友都在玩这个游戏");
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("去看看");
         } else if (obj instanceof UserObj) {
@@ -140,7 +140,7 @@ public class ItemRecommendView2 extends LinearLayout {
             mTvTitle.setText("可能认识");
             mTvReason.setText("与你有共同好友 非也君");
             mIvLogo.setRatio(RatioDatumMode.DATUM_WIDTH, 1, 1);
-            PicUtil.getPicasso().load(Uri.parse(item.image)).into(mIvLogo);
+            PicUtil.getPicasso().load(Uri.parse(item.image)).fit().centerCrop().into(mIvLogo);
             mTvName.setText(item.name);
             mBtnAdd.setText("+添加");
         }

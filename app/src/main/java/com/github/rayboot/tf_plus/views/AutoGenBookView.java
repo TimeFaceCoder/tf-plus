@@ -63,7 +63,7 @@ public class AutoGenBookView extends LinearLayout {
 
     public void bindItem(BookObj bookObj) {
         mIvBookCover.setRatio(RatioDatumMode.DATUM_WIDTH, 3, 4);
-        PicUtil.getPicasso().load(Uri.parse(bookObj.image)).into(mIvBookCover);
+        PicUtil.getPicasso().load(Uri.parse(bookObj.image)).centerCrop().into(mIvBookCover);
 
     }
 }
